@@ -1,11 +1,11 @@
-const { GetInfoApiCountries , GetIdCountry } = require("../controles/Utils")
+const { GetInfoApiCountries , GetInfoCountry , GetAllInfoActivities } = require("../controles/Utils")
 
 const GetCountry = async(req , res) =>{
 
         try{
 
-            const name = req.query.name
-            let CountryTotal = await GetInfoApiCountries()
+            const {name} = req.query
+            let CountryTotal = await GetAllInfoActivities()
 
             if(name){
                 let CountryName = await CountryTotal.filter(t => t.name.toLowerCase().includes(name.toLowerCase()))
@@ -27,7 +27,7 @@ const GetSingleId = async(req , res) =>{
 
     try{
         const {id} = req.params
-        let countryId = await GetIdCountry(id)
+        let countryId = await GetInfoCountry(id)
         res.json(countryId)
     }catch(error){
         res.stauts(400).send(error.message);

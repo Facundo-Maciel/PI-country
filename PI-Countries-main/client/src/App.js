@@ -1,10 +1,22 @@
 import './App.css';
+import {BrowserRouter, Switch , Route} from "react-router-dom";
+import ReturnLandingPage from "./componentes/LandingPage/LandingPage"
 
 function App() {
   return (
-    <div className="App">
-      <h1>Henry Countries</h1>
-    </div>
+   
+    <BrowserRouter>
+    
+      <div>
+
+        <Switch>
+            <Route exact path = "/" component={ReturnLandingPage} /> 
+        </Switch>
+
+      </div>
+    
+    </BrowserRouter>
+
   );
 }
 

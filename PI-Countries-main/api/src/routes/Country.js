@@ -6,10 +6,7 @@ const{
 
 } = require("../controles/Country")
 
-const{getCountry} = require("../controles/Utils")
-
-
-router.get("/country", GetCountry);
+router.get("/", GetCountry);
 
 router.get("/country/:id",GetSingleId);
 

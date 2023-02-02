@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.title{
+    /* color:rgb(167, 19, 19); */
+    
+    font-size: 115px;
+    text-shadow: 3px 3px 5px rgb(71, 71, 69);
+    font-family: fantasy;
+    background-image: linear-gradient(to left, #98FB98, #dbdce3);
+    box-shadow: 0 3px 13px 1px  rgb(52, 208, 247);
+
+    text-align: center;
+}
+
+.button{
+    
+    /* background-size: 50% 50%; */
+    /* border-radius: 50%;
+    background-image: linear-gradient(to left, #830d0de0, #25c6b0); */
+    cursor: pointer;
+    border-radius: 10%;
+    font-style:  menu;
+    box-shadow: 1px 1px 10px rgb(52, 208, 247) ;
+    background-size: 50% 50%;
+    background-image: url("https://i.gifer.com/origin/6e/6e8a16c60b341925613cc1d0e2bcf39f_w200.gif");
+    background-size: cover;
+
+    color:rgb(0, 0, 0); 
+    text-shadow:2px 2px 4px rgb(171, 171, 168);
+    font-size: 30px;
+    font-weight:bolder;
+    padding: 9px 29px 9px 29px;
+    box-shadow: 3px 3px 13px rgb(42, 41, 38);
+    position: relative;
+    margin-top: 18%;
+    margin-left: 45%;
+
+}
+
+.parrafo{
+
+    font-size: 40px;
+    font-family: fantasy;
+    line-height: 0;
+    color: aliceblue;
+    padding: 29px 49px 29px 49px;
+    margin-top: 10%;
+    text-align: center;
+}
+
+ /* ANIMACIONES */
+
+.parrafo:hover{
+    color: rgb(52, 208, 247);
+}
+
+.title:active{
+    /* color:rgb(167, 19, 19); */
+    color: aliceblue;
+    font-size: 115px;
+    text-shadow: 3px 3px 5px rgb(40, 56, 57);
+    font-family: fantasy;
+    background-image: linear-gradient(to left, #191970, #28282b);
+}
+
+.button:hover{
+    
+    /* background-size: 50% 50%; */
+    /* border-radius: 50%;
+    background-image: linear-gradient(to left, #830d0de0, #25c6b0); */
+    color: rgb(255, 255, 255);
+    transition: .3s;
+
+}
