@@ -5,7 +5,7 @@ const GetCountry = async(req , res) =>{
         try{
 
             const {name} = req.query
-            let CountryTotal = await GetAllInfoActivities()
+            let CountryTotal = await GetInfoApiCountries()
 
             if(name){
                 let CountryName = await CountryTotal.filter(t => t.name.toLowerCase().includes(name.toLowerCase()))

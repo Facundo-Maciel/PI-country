@@ -9,9 +9,11 @@ const GetInfoApiCountries = async()=>{
 
     let UrlApiCountri =  await axios.get(`https://restcountries.com/v3.1/all`)
 
+    let infoDd = await Country.findAll()
 
+    if(infoDd.length === 0){   
 
-    const infoApiCountri =  UrlApiCountri.data.map((info) => {
+    let infoApiCountri = await UrlApiCountri.data.map((info) => {
         return{
             id: info.cca3,
             name: info.name.common,
@@ -25,35 +27,13 @@ const GetInfoApiCountries = async()=>{
 
     })
 
-    return infoApiCountri; 
+    infoDd = await Country.bulkCreate(infoApiCountri,)
 
-}
+    }
 
-//funcion para obtener informacion de Activity en DB  ......  
-const GetInfoDbActivity = async() => {
+    let fullData = await Country.findAll({include:Activity})
 
-    let GetInfo = await Activity.findAll({
-
-        include:{
-            model: Country,
-            attributes: ["name"],
-            through: {attributes: []}
-        }
-    })
-
-    return GetInfo
-
-}
-
- // funcion de Concatenancion de Countries de la api y de las Actividades creadas en db ......
-const GetAllInfoActivities = async() =>{
-
-    let infoApi = await GetInfoApiCountries();
-    let infoActivity = await GetInfoDbActivity();
-
-    const fullInfo  = infoActivity.concat(infoApi);
-
-    return fullInfo;
+    return fullData; 
 
 }
 
@@ -110,7 +90,6 @@ const GetAllInfoActivities = async() =>{
 
 // }
 
-
  const GetInfoCountry = async(id) =>{
 
      try{
@@ -142,8 +121,7 @@ const GetAllInfoActivities = async() =>{
 module.exports = {
 
     GetInfoApiCountries,
-    GetInfoDbActivity,
-    GetAllInfoActivities,
+
     GetInfoCountry,
 
 }
