@@ -53,7 +53,7 @@ export default function ReturnHome(){
         // e.preventDefault();
         dispatch(FilterFerActivities(e.target.value))
         setCurrentPage(1);
-        // setOrder(`ordenado ${e.target.value}`)
+         setOrder(`ordenado ${e.target.value}`)
     }
 
     function handleFilterTidy (e) {
@@ -74,7 +74,6 @@ export default function ReturnHome(){
 
 
     return(
-
 
         <div>
 

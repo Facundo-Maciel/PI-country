@@ -83,7 +83,7 @@ export default function CreateActivity(){
             <h1 className={styles.h1}>Create your activity</h1>
             <form onSubmit={(e) => {handleSubmit(e)}} className={styles.form}>
                 <div className={styles.tex}>
-                    <label>name:</label>
+                    <label>Name:</label>
                     <input 
                     className={styles.texinput}
                     type='text' 
@@ -99,7 +99,7 @@ export default function CreateActivity(){
                 </div>
 
                 <div className={styles.tex}>
-                    <label>duration:</label>
+                    <label>Duration:</label>
                     <input
                     className={styles.texinput}
                     type='text'
@@ -114,7 +114,7 @@ export default function CreateActivity(){
                 </div>
 
                 <div className={styles.tex}>
-                    <label>difficulty:</label>
+                    <label>Difficulty:</label>
                     <input
                     className={styles.texinput}
                     type='text'
@@ -129,7 +129,7 @@ export default function CreateActivity(){
                 </div>
     
                 <div className={styles.tex}>
-                    <label>season:</label>
+                    <label>Season:</label>
                     <input
                     className={styles.texinput}
                     type='text'
@@ -149,7 +149,8 @@ export default function CreateActivity(){
                         <p className={styles.error}>{errors.country}</p>
                     ) }
                 {listNamesCountries?.map((d) => (
-                    <option key={d.name} value={d.name}>
+                    <option key={d.name} value={d.name} 
+                    >
                    {d.name}
                     </option>
                 ))}

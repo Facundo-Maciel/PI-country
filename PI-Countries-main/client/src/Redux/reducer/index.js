@@ -96,11 +96,9 @@ export default function rootReducer(state = IncialState, action){
         // }
 
         case "FILTER_FER_ACTIVITIES":
-            let typeActivity = action.payload
-            state.Countries = state.CountriesCopy.filter(d => d.typeActivity  && d.typeActivity.includes(typeActivity))
-            if(action.payload == "all") state.Countries = state.CountriesCopy
-            console.log(action.payload)
-        return{
+                action.payload === 'All' ? state.Countries = state.CountriesCopy.filter(info => info.activities.length) :
+                state.Countries = state.CountriesCopy.filter(name => name.activities.find((element) => element.name?.toLowerCase() === action.payload))
+        return {
             ...state,
             Countries: state.Countries
         }

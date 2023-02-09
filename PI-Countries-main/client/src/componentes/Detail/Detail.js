@@ -7,12 +7,11 @@ import { Link } from "react-router-dom";
 import styles from "../Detail/Detail.Module.css"
 
 export default function Detail(props) {
-    const{id} = useParams()
 
     const dispatch = useDispatch() 
 
     useEffect (() => {
-      dispatch(GetCountryById(id))
+      dispatch(GetCountryById(props.match.params.id.toLowerCase()))
     //   return ()=>{
     //       dispatch(cleandetail())
     //   }
@@ -22,11 +21,13 @@ export default function Detail(props) {
 
     console.log('estos son los detalles',detailsstate);
 
+    let id = 0
     return(
+        
         <div>
 
         {
-
+            
             detailsstate.length > 0 ? 
                 
             <div className={styles.dt}> 
@@ -39,23 +40,20 @@ export default function Detail(props) {
                 <h2 className={styles.type}>subregion: {detailsstate[0].subregion|| "not found"}</h2>
                 <h2 className={styles.type}>area: {detailsstate[0].area|| "not found"}</h2> 
                 <h2 className={styles.type}>population: {detailsstate[0].population|| "not found"}</h2>
-                {/* <h2 className={styles.activities}>activities name: {detailsstate[0].activities ||  "not found"}</h2> */}
-                {/* <h3 className={styles.activities}>duration: {detailsstate[0].activities[0].duration||  "not found"}</h3>
-                <h3 className={styles.activities}>season : {detailsstate[0].activities[0].season||  "not found"}</h3>
-                <h3 className={styles.activities}>difficulty : {detailsstate[0].activities[0].difficulty||  "not found"}</h3> */}
+               
                 <h3>Activities</h3>
                 <div>
                 {
 
-                    detailsstate[0].hasOwnProperty('activities') ? detailsstate[0].activities.map(a =>{
+                    detailsstate[0].hasOwnProperty('activities') ? detailsstate[0].activities.map(activities =>{
                         id++
                         return(
                             <div  key={id}>
                                 
-                            <h2>ACTIVITY:{a.name}</h2>
-                            <h2>DIFFICULTY: {a.difficulty}</h2>
-                            <h2>DURATION: {a.duration}</h2>
-                            <h2>SEASON: {a.season}</h2>
+                            <h2>ACTIVITY:{activities.name}</h2>
+                            <h2>DIFFICULTY: {activities.difficulty}</h2>
+                            <h2>DURATION: {activities.duration}</h2>
+                            <h2>SEASON: {activities.season}</h2>
 
                             </div>
                         )
