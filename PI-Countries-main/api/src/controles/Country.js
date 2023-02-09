@@ -1,4 +1,4 @@
-const { GetInfoApiCountries , GetInfoCountry , GetAllInfoActivities } = require("../controles/Utils")
+const { GetInfoApiCountries , GetInfoCountry , GetNames } = require("../controles/Utils")
 
 const GetCountry = async(req , res) =>{
 
@@ -22,6 +22,16 @@ const GetCountry = async(req , res) =>{
 
 }
 
+const GetNameCountry = async(req, res) =>{
+
+   try{
+        let countryName = await GetNames()
+        res.json(countryName)
+   }catch(error){
+    res.stauts(400).send(error.message);
+   }
+}
+
 
 const GetSingleId = async(req , res) =>{
 
@@ -37,5 +47,6 @@ const GetSingleId = async(req , res) =>{
 
 module.exports = {
     GetCountry,
-    GetSingleId
+    GetSingleId,
+    GetNameCountry
 }

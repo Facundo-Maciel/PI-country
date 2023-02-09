@@ -1,0 +1,37 @@
+
+.divEstile{
+
+    display: flex;
+    height: 80px;
+    /* background-image: linear-gradient(to left,#7fffd450, #faebd749); */
+    background-image: linear-gradient(
+
+    #00000095 0,
+
+    #0e072d93 25%,
+
+    rgba(27, 46, 96, 0.556) 50%,
+
+    #12358f8d 75%,
+
+    #08088a8b 100%
+      );
+
+    color: #000000;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 1px 1px 10px 6px rgba(254, 254, 254, 0.955);
+}
+
+.tituloEstile{
+    font-size: 50px;
+    color:#0e1011ec;
+    font-weight:bolder;
+    font-family: fantasy;
+    font-style:italic;
+    letter-spacing: px;
+    text-decoration: none;
+    text-shadow: 3px 3px 1px rgb(244, 248, 254);
+
+}

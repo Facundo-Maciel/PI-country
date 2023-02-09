@@ -1,0 +1,44 @@
+.TypeDiets{
+    
+    border-radius: 10%;
+    color:rgb(255, 255, 255); 
+    
+    font-family: fantasy;
+    font-style:italic;
+    height: 50px;
+    text-align: center;
+    width: 150px;
+    font-size: 20px;
+    box-shadow: 1px 1px 10px rgb(52, 208, 247) ;
+
+    background-size: cover;
+    background-color:rgba(52, 208, 247, 0.696) ;
+    background-image: url(https://bestanimations.com/media/plasma-light/248830665electrostatic-plasma-light-lamp-animation-9.gif);
+    box-shadow: 1px 1px 10px 6px rgba(254, 254, 254, 0.955);
+
+}
+
+
+.ContenedorBarra{
+
+    display: flex;
+    height: 80px;
+    /* background-image: linear-gradient(to left, #7fffd430, #faebd736); */
+    justify-content: space-between;
+    align-items: center;
+    /* box-shadow: 0 3px 13px 1px  rgb(52, 208, 247); */
+    
+}
+
+
+
+.CardArea{
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+
+}

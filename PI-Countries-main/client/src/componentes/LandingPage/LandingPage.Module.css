@@ -10,8 +10,8 @@
     font-size: 115px;
     text-shadow: 3px 3px 5px rgb(71, 71, 69);
     font-family: fantasy;
-    background-image: linear-gradient(to left, #98FB98, #dbdce3);
-    box-shadow: 0 3px 13px 1px  rgb(52, 208, 247);
+    background-image: linear-gradient(to left, #7fffd4ab, #00008b8c);
+    box-shadow: 1px 1px 10px 6px rgba(254, 254, 254, 0.955);
 
     text-align: center;
 }
@@ -26,11 +26,11 @@
     font-style:  menu;
     box-shadow: 1px 1px 10px rgb(52, 208, 247) ;
     background-size: 50% 50%;
-    background-image: url("https://i.gifer.com/origin/6e/6e8a16c60b341925613cc1d0e2bcf39f_w200.gif");
+    background-image: url("https://bestanimations.com/media/plasma-light/248830665electrostatic-plasma-light-lamp-animation-9.gif");
     background-size: cover;
 
-    color:rgb(0, 0, 0); 
-    text-shadow:2px 2px 4px rgb(171, 171, 168);
+    color:rgb(255, 254, 254); 
+    text-shadow:2px 2px 4px rgb(62, 116, 203);
     font-size: 30px;
     font-weight:bolder;
     padding: 9px 29px 9px 29px;
@@ -38,7 +38,7 @@
     position: relative;
     margin-top: 18%;
     margin-left: 45%;
-
+    box-shadow: 1px 1px 10px 6px rgba(254, 254, 254, 0.955);
 }
 
 .parrafo{
@@ -50,6 +50,7 @@
     padding: 29px 49px 29px 49px;
     margin-top: 10%;
     text-align: center;
+
 }
 
  /* ANIMACIONES */
@@ -64,7 +65,7 @@
     font-size: 115px;
     text-shadow: 3px 3px 5px rgb(40, 56, 57);
     font-family: fantasy;
-    background-image: linear-gradient(to left, #191970, #28282b);
+    background-image: linear-gradient(to left, #19197089, #28282b82);
 }
 
 .button:hover{

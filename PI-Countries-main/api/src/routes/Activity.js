@@ -1,10 +1,11 @@
 const  router  = require('express').Router();
 
 
-const{createActivity} = require("../controles/Activity")
+const{createActivity, getActivity} = require("../controles/Activity")
 
 router.post("/activity", createActivity);
 
+router.get("/activity", getActivity);
 
 
 

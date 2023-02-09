@@ -1,4 +1,5 @@
 const {Country , Activity } = require("../db")
+const {GetActivityInfo , GetInfoApiCountries} = require("./Utils")
 
 
 const createActivity = async(req , res) =>{
@@ -24,8 +25,34 @@ const createActivity = async(req , res) =>{
 
 }
 
+const getActivity = async(req , res) =>{
+
+    try{
+        
+        //await GetInfoApiCountries();
+        
+        let Diets = await GetActivityInfo((d) =>{
+
+            return{
+                id: d.id,
+                name: d.name,
+                difficulty: d.difficulty,
+                duration: d.duration, 
+                season: d.season, 
+                country: d.country
+            }
+
+        });
+        res.send(Diets);
+    }catch(error){
+        res.send(error);
+    }
+
+} 
+
 module.exports = {
 
     createActivity,
+    getActivity
 
 }

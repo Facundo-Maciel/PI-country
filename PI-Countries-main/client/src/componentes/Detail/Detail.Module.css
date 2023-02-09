@@ -1,0 +1,92 @@
+.dt{
+    /* background-image: url("https://img.freepik.com/free-photo/top-view-meat-concept-with-copy-space_23-2148738949.jpg?w=2000");
+     */
+     background-image: url("https://images4.alphacoders.com/110/thumb-1920-1108171.png");
+   background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.imga{
+    height: 8cm;
+    width: 10cm;
+    border-radius: 18px;
+    box-shadow: 4px 4px  10px #FFFACD;
+    
+       
+}
+
+.type{
+    background-color:rgba(255, 255, 255, 0.238);
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 4px 4px 10px #FFFACD;  
+    font-family: italic;
+    font-family: fantasy;
+    color: rgb(3, 3, 3);
+    text-shadow: 4px 1px 5px #FFFACD; 
+}
+.name{
+    background-color:rgba(0, 0, 0, 0.348) ;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 4px 4px 10px #FFFACD;    
+    font-family: italic;
+    font-family: fantasy;
+    text-shadow: 4px 4px 10px #FFFACD;  
+}
+
+
+.activities{
+ 
+    background-color:#7FFFD4 ;
+    border-radius: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 4px 4px 10px #E0FFFF;    
+    font-family: italic;
+    font-family: fantasy;
+    
+    color: rgb(14, 14, 13);
+
+}
+
+.btn {
+color: rgb(0, 0, 0);
+background-color:transparent;
+border-left: 5px solid #7FFFD4;
+border-right: 5px solid  #7FFFD4;
+font-family: fantasy;
+font-style:italic;
+width: 150px;  
+font-size: 20px;
+border-radius: 20%;
+box-shadow: 4px 4px 10px #7FFFD4;   
+  }
+   
+.btn:hover {
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: 2px 2px 10px #7FFFD4;  
+    background: #7FFFD4;
+    background-image: -webkit-linear-gradient(top, #7FFFD4, #7FFFD4);
+    background-image: -moz-linear-gradient(top, #f2f2b1, #f3ff99);
+    background-image: -ms-linear-gradient(top, #f2f2b1, #f3ff99);
+    background-image: -o-linear-gradient(top, #f2f2b1, #f3ff99);
+    background-image: linear-gradient(to bottom, #f2f2b1, #f3ff99);
+    text-decoration: none;
+    cursor: pointer; 
+
+  }
+  
+.img{
+    margin-top: 7%;
+    margin-left: 23%;
+}
